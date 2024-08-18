@@ -60,6 +60,7 @@ variable "sr_prot" {
 
 variable "sr_ip" {
   type = string
+  sensitive = true
 }
 
 variable "sr_st" {
