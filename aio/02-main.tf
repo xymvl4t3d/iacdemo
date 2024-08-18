@@ -40,12 +40,11 @@ resource "oci_core_network_security_group" "nsg01" {
 
 resource "oci_core_network_security_group_security_rule" "ir01" {
   network_security_group_id = oci_core_network_security_group.nsg01.id
-  direction    = var.sr_dir
-    protocol     = var.sr_prot
-    source       = var.sr_ip
-    source_type  = var.sr_st
-    is_stateless = var.sr_isl
-    desc         = var.sr_desc
+  direction                 = var.sr_dir
+  protocol                  = var.sr_prot
+  source                    = var.sr_ip
+  source_type               = var.sr_st
+  description               = var.sr_desc
 }
 
 resource "oci_core_instance" "instance01" {
