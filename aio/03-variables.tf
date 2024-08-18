@@ -59,7 +59,7 @@ variable "sr_prot" {
 }
 
 variable "sr_ip" {
-  type = string
+  type      = string
   sensitive = true
 }
 
