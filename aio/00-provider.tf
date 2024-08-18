@@ -9,5 +9,4 @@ terraform {
 
 provider "oci" {
   region = var.region
-  #   compartment_id = var.compartment_ocid
 }
