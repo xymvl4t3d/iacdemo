@@ -39,17 +39,13 @@ resource "oci_core_network_security_group" "nsg01" {
 }
 
 resource "oci_core_network_security_group_security_rule" "ir01" {
-  compartment_id            = var.compartment_ocid
   network_security_group_id = oci_core_network_security_group.nsg01.id
-
-  security_rule {
-    direction    = var.sr_dir
+  direction    = var.sr_dir
     protocol     = var.sr_prot
     source       = var.sr_ip
     source_type  = var.sr_st
     is_stateless = var.sr_isl
     desc         = var.sr_desc
-  }
 }
 
 resource "oci_core_instance" "instance01" {
